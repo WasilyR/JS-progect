@@ -1,73 +1,45 @@
-"use strict";
 
+/* Задание на урок:
 
+1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
+'Сколько фильмов вы уже посмотрели?'
 
-// const leftBorderWidth = 1;
+2) Создать объект personalMovieDB и в него поместить такие свойства:
+    - count - сюда передается ответ на первый вопрос
+    - movies - в это свойство поместить пустой объект
+    - actors - тоже поместить пустой объект
+    - genres - сюда поместить пустой массив
+    - privat - в это свойство поместить boolean(логическое) значение false
 
-// console.log(leftBorderWidth);
+3) Задайте пользователю по два раза вопросы:
+    - 'Один из последних просмотренных фильмов?'
+    - 'На сколько оцените его?'
+Ответы стоит поместить в отдельные переменные
+Записать ответы в объект movies в формате: 
+    movies: {
+        'logan': '8.1'
+    }
 
-// // alert(5);
-// // [].push('a');
+Проверить, чтобы все работало без ошибок в консоли */
 
-// let number = 4.6;
+'use strict';
 
-// console.log(-4/0);
-// console.log('string' * 8);
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-// const obj = {
-// 	name: 'John',
-// 	age: 45,
-// 	isMarried: false
-// };
+const personalMovieDB = {
+	count: numberOfFilms,
+	movies: {},
+	actors: {},
+	genres: [],
+	privat: false
+};
 
-// console.log(obj.isMarried);
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+		b = prompt('На сколько оцените его?', ''),
+		c = prompt('Один из последних просмотренных фильмов?', ''),
+		d = prompt('На сколько оцените его?', '');
 
-// let array = ['plum.png', 'orange.png', 'apple.jpg'];
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-// console.log(array[2]);
-
-// alert('Hello');
-
-// const result = confirm('Are you here?');
-
-// console.log(result);
-
-// const answer = +prompt('Вам есть 18?', '16');
-
-// console.log(answer + 5);
-
-// const answers = [];
-
-// answers[0] = prompt('Как ваше имя?', '');
-// answers[1] = prompt('Как ваша фамилия?', '');
-// answers[2] = prompt('Сколько вам лет?', '');
-
-// document.write(answers);
-
-// const category = 'toys';
-
-// console.log(`https://someurl.com/${category}/5`);
-
-// const user = 'Wasily';
-
-// alert(`Привет, ${user}`);
-
-// let incr = 10,
-// 	decr = 10;
-
-// incr++;
-// decr--;
-
-// console.log(++incr);
-// console.log(--decr);
-
-// const isChecked = true,
-// 		isClose = true;
-
-// console.log(isChecked && isClose);
-
-
-const isChecked = false,
-		isClose = false;
-
-console.log(isChecked || !isClose);
+console.log(personalMovieDB);
